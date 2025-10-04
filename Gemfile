@@ -37,6 +37,9 @@ gem "kamal", require: false
 # Add HTTP asset caching/compression and X-Sendfile acceleration to Puma [https://github.com/basecamp/thruster/]
 gem "thruster", require: false
 
+gem "factory_bot", "~> 6.5.4"
+gem "view_component"
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
@@ -49,15 +52,34 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  gem "rspec-rails"
+  gem "timecop", ">= 0.7.4"
 end
 
 group :development do
+  gem "erb_lint", require: false
+  gem "rubocop", "1.81.1",   require: false
+  gem "rubocop-capybara",    require: false
+  gem "rubocop-factory_bot", require: false
+  gem "rubocop-performance", require: false
+  gem "rubocop-rails",       require: false
+  gem "rubocop-rspec",       require: false
+  gem "ruby-lsp-rails"
+  gem "ruby-lsp-rspec"
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "capybara"
+  gem "capybara", "~> 3.40"
+  gem "database_cleaner", require: false
+  gem "rails-controller-testing"
+  gem "rspec-collection_matchers"
+  gem "rspec-instafail", require: false
+  gem "rspec-snapshot", "~> 2.0"
+  gem "shoulda-matchers"
   gem "selenium-webdriver"
+  gem "turnip"
 end
