@@ -59,7 +59,7 @@ end
 
 group :development do
   gem "erb_lint", require: false
-  gem "rubocop", "1.81.1",   require: false
+  gem "rubocop", "1.81.6",   require: false
   gem "rubocop-capybara",    require: false
   gem "rubocop-factory_bot", require: false
   gem "rubocop-performance", require: false
